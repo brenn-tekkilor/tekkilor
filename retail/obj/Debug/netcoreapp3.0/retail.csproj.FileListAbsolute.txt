@@ -1,0 +1,11 @@
+C:\Users\brenn\repos\Tekkilor\retail\bin\Debug\netcoreapp3.0\retail.deps.json
+C:\Users\brenn\repos\Tekkilor\retail\bin\Debug\netcoreapp3.0\retail.dll
+C:\Users\brenn\repos\Tekkilor\retail\bin\Debug\netcoreapp3.0\retail.pdb
+C:\Users\brenn\repos\Tekkilor\retail\bin\Debug\netcoreapp3.0\utility.dll
+C:\Users\brenn\repos\Tekkilor\retail\bin\Debug\netcoreapp3.0\utility.pdb
+C:\Users\brenn\repos\Tekkilor\retail\obj\Debug\netcoreapp3.0\retail.AssemblyInfoInputs.cache
+C:\Users\brenn\repos\Tekkilor\retail\obj\Debug\netcoreapp3.0\retail.AssemblyInfo.cs
+C:\Users\brenn\repos\Tekkilor\retail\obj\Debug\netcoreapp3.0\retail.csproj.CopyComplete
+C:\Users\brenn\repos\Tekkilor\retail\obj\Debug\netcoreapp3.0\retail.dll
+C:\Users\brenn\repos\Tekkilor\retail\obj\Debug\netcoreapp3.0\retail.pdb
+C:\Users\brenn\repos\Tekkilor\retail\obj\Debug\netcoreapp3.0\retail.csprojAssemblyReference.cache

@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "frysfoodScraper": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\brenn\\repos\\Tekkilor\\frysfood_category_scraper",
+      "nativeDebugging": true
+    }
+  }
+}

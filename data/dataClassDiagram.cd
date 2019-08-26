@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="data.mongodb.Db">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQhAIAAAAAAQQgAACAQAAQADAABAAAAQIEAAmBAABQ=</HashCode>
+      <FileName>mongodb\Db.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="data.mongodb.extensions.MongoDocExtensions" Collapsed="true">
+    <Position X="4.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIEAAAAAAAAAAAAAAAAA0AAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>mongodb\extensions\MongoDocExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="data.mongodb.interfaces.AMongoCollectionRouter" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>mongodb\interfaces\AMongoCollectionRouter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="data.mongodb.interfaces.IInitMongoDriver" Collapsed="true">
+    <Position X="4.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>mongodb\interfaces\IInitMongoDriver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.mongodb.interfaces.IMongoDoc" Collapsed="true">
+    <Position X="6" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>mongodb\interfaces\IMongoDoc.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="10" />
+</ClassDiagram>

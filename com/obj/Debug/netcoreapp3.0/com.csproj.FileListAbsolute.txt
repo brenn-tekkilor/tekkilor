@@ -1,0 +1,16 @@
+C:\Users\brenn\repos\Tekkilor\com\bin\Debug\netcoreapp3.0\com.deps.json
+C:\Users\brenn\repos\Tekkilor\com\bin\Debug\netcoreapp3.0\com.dll
+C:\Users\brenn\repos\Tekkilor\com\bin\Debug\netcoreapp3.0\com.pdb
+C:\Users\brenn\repos\Tekkilor\com\bin\Debug\netcoreapp3.0\Interop.SHDocVw.dll
+C:\Users\brenn\repos\Tekkilor\com\bin\Debug\netcoreapp3.0\Interop.MSHTML.dll
+C:\Users\brenn\repos\Tekkilor\com\obj\Debug\netcoreapp3.0\Interop.SHDocVw.dll
+C:\Users\brenn\repos\Tekkilor\com\obj\Debug\netcoreapp3.0\Interop.MSHTML.dll
+C:\Users\brenn\repos\Tekkilor\com\obj\Debug\netcoreapp3.0\com.csproj.ResolveComReference.cache
+C:\Users\brenn\repos\Tekkilor\com\obj\Debug\netcoreapp3.0\com.AssemblyInfoInputs.cache
+C:\Users\brenn\repos\Tekkilor\com\obj\Debug\netcoreapp3.0\com.AssemblyInfo.cs
+C:\Users\brenn\repos\Tekkilor\com\obj\Debug\netcoreapp3.0\com.dll
+C:\Users\brenn\repos\Tekkilor\com\obj\Debug\netcoreapp3.0\com.pdb
+C:\Users\brenn\repos\Tekkilor\com\obj\Debug\netcoreapp3.0\com.csprojAssemblyReference.cache
+C:\Users\brenn\repos\Tekkilor\com\obj\Debug\netcoreapp3.0\com.comResources.resources
+C:\Users\brenn\repos\Tekkilor\com\obj\Debug\netcoreapp3.0\com.csproj.GenerateResource.cache
+C:\Users\brenn\repos\Tekkilor\com\obj\Debug\netcoreapp3.0\com.Properties.Resources.resources

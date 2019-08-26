@@ -1,0 +1,8 @@
+C:\Users\brenn\repos\Tekkilor\Utility\bin\Debug\netcoreapp3.0\utility.deps.json
+C:\Users\brenn\repos\Tekkilor\Utility\bin\Debug\netcoreapp3.0\utility.dll
+C:\Users\brenn\repos\Tekkilor\Utility\bin\Debug\netcoreapp3.0\utility.pdb
+C:\Users\brenn\repos\Tekkilor\Utility\obj\Debug\netcoreapp3.0\utility.AssemblyInfoInputs.cache
+C:\Users\brenn\repos\Tekkilor\Utility\obj\Debug\netcoreapp3.0\utility.AssemblyInfo.cs
+C:\Users\brenn\repos\Tekkilor\Utility\obj\Debug\netcoreapp3.0\utility.dll
+C:\Users\brenn\repos\Tekkilor\Utility\obj\Debug\netcoreapp3.0\utility.pdb
+C:\Users\brenn\repos\Tekkilor\Utility\obj\Debug\netcoreapp3.0\utility.csprojAssemblyReference.cache

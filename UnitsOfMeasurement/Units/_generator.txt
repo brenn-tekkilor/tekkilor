@@ -1,0 +1,447 @@
+﻿Units and Scales generated on 8/16/2019 4:38:04 AM
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  U N I T S                              | 48 units | 14 families (id: 0 - 13)
+//
+////////////////////////////////////////////////////////////////////////////////
+[dim] unit {tags} : factor (family)
+
+[L] Meter {"m"} : 1 (Meter)
+
+    (Meter)Inch
+    (Meter)Point
+    (Meter)Pica
+    (Meter)Foot
+    (Meter)Yard
+    (Meter)Mile
+    (Meter)Millimeter
+    (Meter)Centimeter
+    SquareMeter = Meter * Meter
+    Meter_Sec = Meter / Second
+    Second = Meter / Meter_Sec
+
+[L] Centimeter {"cm"} : 100 (Meter)
+
+    (Centimeter)Meter
+    (Centimeter)Inch
+    (Centimeter)Point
+    (Centimeter)Pica
+    (Centimeter)Foot
+    (Centimeter)Yard
+    (Centimeter)Mile
+    (Centimeter)Millimeter
+    SquareCentimeter = Centimeter * Centimeter
+
+[L] Millimeter {"mm"} : 1000 (Meter)
+
+    (Millimeter)Centimeter
+    (Millimeter)Meter
+    (Millimeter)Inch
+    (Millimeter)Point
+    (Millimeter)Pica
+    (Millimeter)Foot
+    (Millimeter)Yard
+    (Millimeter)Mile
+
+[L] Inch {"in"} : 39.370078740157481 (Meter)
+
+    (Inch)Point
+    (Inch)Pica
+    (Inch)Foot
+    (Inch)Yard
+    (Inch)Mile
+    (Inch)Millimeter
+    (Inch)Centimeter
+    (Inch)Meter
+    SquareInch = Inch * Inch
+
+[L] Foot {"ft"} : 3.2808398950131235 (Meter)
+
+    (Foot)Yard
+    (Foot)Mile
+    (Foot)Millimeter
+    (Foot)Centimeter
+    (Foot)Meter
+    (Foot)Inch
+    (Foot)Point
+    (Foot)Pica
+    SquareFoot = Foot * Foot
+
+[L] Yard {"yd"} : 1.0936132983377078 (Meter)
+
+    (Yard)Mile
+    (Yard)Millimeter
+    (Yard)Centimeter
+    (Yard)Meter
+    (Yard)Inch
+    (Yard)Point
+    (Yard)Pica
+    (Yard)Foot
+    SquareYard = Yard * Yard
+
+[L] Mile {"mil"} : 0.000621371192237334 (Meter)
+
+    (Mile)Millimeter
+    (Mile)Centimeter
+    (Mile)Meter
+    (Mile)Inch
+    (Mile)Point
+    (Mile)Pica
+    (Mile)Foot
+    (Mile)Yard
+    SquareMile = Mile * Mile
+    MPH = Mile / Hour
+    Hour = Mile / MPH
+
+[L] Point {"pt"} : 2834.6456692913389 (Meter)
+
+    (Point)Pica
+    (Point)Foot
+    (Point)Yard
+    (Point)Mile
+    (Point)Millimeter
+    (Point)Centimeter
+    (Point)Meter
+    (Point)Inch
+
+[L] Pica {"pc"} : 236.22047244094492 (Meter)
+
+    (Pica)Foot
+    (Pica)Yard
+    (Pica)Mile
+    (Pica)Millimeter
+    (Pica)Centimeter
+    (Pica)Meter
+    (Pica)Inch
+    (Pica)Point
+
+[T] Second {"s"} : 1 (Second)
+
+    (Second)Minute
+    (Second)Hour
+    (Second)Day
+    (Second)Year
+    (Second)Month
+    (Second)Week
+
+[T] Minute {"min"} : 0.016666666666666666 (Second)
+
+    (Minute)Hour
+    (Minute)Day
+    (Minute)Year
+    (Minute)Month
+    (Minute)Week
+    (Minute)Second
+
+[T] Hour {"h"} : 0.00027777777777777778 (Second)
+
+    (Hour)Day
+    (Hour)Year
+    (Hour)Month
+    (Hour)Week
+    (Hour)Second
+    (Hour)Minute
+
+[T] Day {"d"} : 1.1574074074074074E-05 (Second)
+
+    (Day)Year
+    (Day)Month
+    (Day)Week
+    (Day)Second
+    (Day)Minute
+    (Day)Hour
+
+[T] Week {"wk"} : 1.6534391534391533E-06 (Second)
+
+    (Week)Second
+    (Week)Minute
+    (Week)Hour
+    (Week)Day
+    (Week)Year
+    (Week)Month
+
+[T] Month {"mo"} : 3.8580246913580245E-07 (Second)
+
+    (Month)Week
+    (Month)Second
+    (Month)Minute
+    (Month)Hour
+    (Month)Day
+    (Month)Year
+
+[T] Year {"yr"} : 3.1709791983764586E-08 (Second)
+
+    (Year)Month
+    (Year)Week
+    (Year)Second
+    (Year)Minute
+    (Year)Hour
+    (Year)Day
+
+[M] Kilogram {"kg"} : 1 (Kilogram)
+
+    (Kilogram)Pound
+    (Kilogram)Ounce
+    (Kilogram)Gram
+    Newton = Kilogram * Meter_Sec2
+    Newton = Meter_Sec2 * Kilogram
+
+[M] Gram {"g"} : 1000 (Kilogram)
+
+    (Gram)Kilogram
+    (Gram)Pound
+    (Gram)Ounce
+
+[M] Pound {"lb"} : 2.2046226218487757 (Kilogram)
+
+    (Pound)Ounce
+    (Pound)Gram
+    (Pound)Kilogram
+
+[M] Ounce {"ou"} : 35.273961949580411 (Kilogram)
+
+    (Ounce)Gram
+    (Ounce)Kilogram
+    (Ounce)Pound
+
+[ϴ] DegKelvin {"K", "deg.K"} : 1 (DegKelvin)
+
+    (DegKelvin)DegFahrenheit
+    (DegKelvin)DegCelsius
+
+[ϴ] DegCelsius {"\u00B0C", "deg.C"} : 1 (DegKelvin)
+
+    (DegCelsius)DegKelvin
+    (DegCelsius)DegFahrenheit
+
+[ϴ] DegFahrenheit {"\u00B0F", "deg.F"} : 1.8 (DegKelvin)
+
+    (DegFahrenheit)DegCelsius
+    (DegFahrenheit)DegKelvin
+
+[J] Candela {"cd"} : 1 (Candela)
+
+
+[1] Radian {"rad"} : 1 (Radian)
+
+    (Radian)Degree
+
+[1] Degree {"\u00B0", "deg"} : (180d / Math.PI) * Radian.Factor (Radian)
+
+    (Degree)Radian
+
+[L2] SquareMeter {"m\u00B2", "m2"} : 1 (SquareMeter)
+
+    (SquareMeter)SquareMile
+    (SquareMeter)SquareYard
+    (SquareMeter)SquareFoot
+    (SquareMeter)SquareInch
+    (SquareMeter)SquareCentimeter
+    Meter = SquareMeter / Meter
+    CubicMeter = SquareMeter * Meter
+    CubicMeter = Meter * SquareMeter
+
+[L2] SquareCentimeter {"cm\u00B2", "cm2"} : 10000 (SquareMeter)
+
+    (SquareCentimeter)SquareMeter
+    (SquareCentimeter)SquareMile
+    (SquareCentimeter)SquareYard
+    (SquareCentimeter)SquareFoot
+    (SquareCentimeter)SquareInch
+    Centimeter = SquareCentimeter / Centimeter
+    CubicCentimeter = SquareCentimeter * Centimeter
+    CubicCentimeter = Centimeter * SquareCentimeter
+
+[L2] SquareInch {"in\u00B2", "sq in"} : 1550.0031000062002 (SquareMeter)
+
+    (SquareInch)SquareCentimeter
+    (SquareInch)SquareMeter
+    (SquareInch)SquareMile
+    (SquareInch)SquareYard
+    (SquareInch)SquareFoot
+    Inch = SquareInch / Inch
+    CubicInch = SquareInch * Inch
+    CubicInch = Inch * SquareInch
+
+[L2] SquareFoot {"ft\u00B2", "sq ft"} : 10.763910416709724 (SquareMeter)
+
+    (SquareFoot)SquareInch
+    (SquareFoot)SquareCentimeter
+    (SquareFoot)SquareMeter
+    (SquareFoot)SquareMile
+    (SquareFoot)SquareYard
+    Foot = SquareFoot / Foot
+    CubicFoot = SquareFoot * Foot
+    CubicFoot = Foot * SquareFoot
+
+[L2] SquareYard {"yd\u00B2", "sq yd"} : 1.1959900463010804 (SquareMeter)
+
+    (SquareYard)SquareFoot
+    (SquareYard)SquareInch
+    (SquareYard)SquareCentimeter
+    (SquareYard)SquareMeter
+    (SquareYard)SquareMile
+    Yard = SquareYard / Yard
+    CubicYard = SquareYard * Yard
+    CubicYard = Yard * SquareYard
+
+[L2] SquareMile {"mil\u00B2", "sq mil"} : 3.8610215854244592E-07 (SquareMeter)
+
+    (SquareMile)SquareYard
+    (SquareMile)SquareFoot
+    (SquareMile)SquareInch
+    (SquareMile)SquareCentimeter
+    (SquareMile)SquareMeter
+    Mile = SquareMile / Mile
+
+[L3] CubicMeter {"m\u00B3", "m3"} : 1 (CubicMeter)
+
+    (CubicMeter)CubicYard
+    (CubicMeter)CubicFoot
+    (CubicMeter)CubicInch
+    (CubicMeter)Liter
+    (CubicMeter)CubicCentimeter
+    Meter = CubicMeter / SquareMeter
+    SquareMeter = CubicMeter / Meter
+
+[L3] CubicCentimeter {"cm\u00B3", "cm3"} : 1000000 (CubicMeter)
+
+    (CubicCentimeter)CubicMeter
+    (CubicCentimeter)CubicYard
+    (CubicCentimeter)CubicFoot
+    (CubicCentimeter)CubicInch
+    (CubicCentimeter)Liter
+    Centimeter = CubicCentimeter / SquareCentimeter
+    SquareCentimeter = CubicCentimeter / Centimeter
+
+[L3] Liter {"L"} : 0.001 (CubicMeter)
+
+    (Liter)CubicCentimeter
+    (Liter)CubicMeter
+    (Liter)CubicYard
+    (Liter)CubicFoot
+    (Liter)CubicInch
+
+[L3] CubicInch {"in\u00B3", "cu in"} : 61023.74409473229 (CubicMeter)
+
+    (CubicInch)Liter
+    (CubicInch)CubicCentimeter
+    (CubicInch)CubicMeter
+    (CubicInch)CubicYard
+    (CubicInch)CubicFoot
+    Inch = CubicInch / SquareInch
+    SquareInch = CubicInch / Inch
+
+[L3] CubicFoot {"ft\u00B3", "cu ft"} : 35.314666721488592 (CubicMeter)
+
+    (CubicFoot)CubicInch
+    (CubicFoot)Liter
+    (CubicFoot)CubicCentimeter
+    (CubicFoot)CubicMeter
+    (CubicFoot)CubicYard
+    Foot = CubicFoot / SquareFoot
+    SquareFoot = CubicFoot / Foot
+
+[L3] CubicYard {"yd\u00B3", "cu yd"} : 1.3079506193143924 (CubicMeter)
+
+    (CubicYard)CubicFoot
+    (CubicYard)CubicInch
+    (CubicYard)Liter
+    (CubicYard)CubicCentimeter
+    (CubicYard)CubicMeter
+    Yard = CubicYard / SquareYard
+    SquareYard = CubicYard / Yard
+
+[LT-1] Meter_Sec {"m/s"} : 1 (Meter_Sec)
+
+    (Meter_Sec)MPH
+    Meter = Meter_Sec * Second
+    Meter = Second * Meter_Sec
+    Meter_Sec2 = Meter_Sec / Second
+    Second = Meter_Sec / Meter_Sec2
+
+[LT-1] MPH {"mph", "mi/h"} : 2.2369362920544025 (Meter_Sec)
+
+    (MPH)Meter_Sec
+    Mile = MPH * Hour
+    Mile = Hour * MPH
+
+[LT-2] Meter_Sec2 {"m/s2"} : 1 (Meter_Sec2)
+
+    Meter_Sec = Meter_Sec2 * Second
+    Meter_Sec = Second * Meter_Sec2
+
+[LT-2M] Newton {"N"} : 1 (Newton)
+
+    Meter_Sec2 = Newton / Kilogram
+    Kilogram = Newton / Meter_Sec2
+    Joule = Newton * Meter
+    Joule = Meter * Newton
+    NewtonMeter = Newton ^ Meter
+    NewtonMeter = Meter ^ Newton
+
+[L2T-2M] Joule {"J"} : 1 (Joule)
+
+    (Joule)BTU
+    (Joule)Calorie
+    Meter = Joule / Newton
+    Newton = Joule / Meter
+    Watt = Joule / Second
+    Second = Joule / Watt
+
+[L2T-2M] Calorie {"cal"} : 0.23884589662749595 (Joule)
+
+    (Calorie)Joule
+    (Calorie)BTU
+
+[L2T-2M] BTU {"btu"} : 0.00094781712031331725 (Joule)
+
+    (BTU)Calorie
+    (BTU)Joule
+    BTU_Hour = BTU / Hour
+    Hour = BTU / BTU_Hour
+
+[L2T-3M] Watt {"W"} : 1 (Watt)
+
+    (Watt)BTU_Hour
+    (Watt)KiloWatt
+    Joule = Watt * Second
+    Joule = Second * Watt
+
+[L2T-3M] BTU_Hour {"btu/h"} : 3.4121416331279422 (Watt)
+
+    (BTU_Hour)KiloWatt
+    (BTU_Hour)Watt
+    BTU = BTU_Hour * Hour
+    BTU = Hour * BTU_Hour
+
+[L2T-2M] NewtonMeter {"N\u00B7m", "N*m"} : 1 (NewtonMeter)
+
+    Meter = NewtonMeter / Newton
+    Newton = NewtonMeter / Meter
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  S C A L E S                            | 3 scales | 1 families (id: 14 - 14)
+//
+////////////////////////////////////////////////////////////////////////////////
+[dim] scale : refpoint = unit offset (family)
+
+[ϴ] Kelvin : AbsoluteZero = DegKelvin 0 (Kelvin)
+
+    (Kelvin)Fahrenheit
+    (Kelvin)Celsius
+
+[ϴ] Celsius : AbsoluteZero = DegCelsius -273.15 (Kelvin)
+
+    (Celsius)Kelvin
+    (Celsius)Fahrenheit
+
+[ϴ] Fahrenheit : AbsoluteZero = DegFahrenheit -459.66999999999996 (Kelvin)
+
+    (Fahrenheit)Celsius
+    (Fahrenheit)Kelvin
+
+// End of report ///////////////////////////////////////////////////////////////
+
