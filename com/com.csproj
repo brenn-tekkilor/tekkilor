@@ -4,10 +4,12 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <LangVersion>preview</LangVersion>
     <NeutralLanguage>en</NeutralLanguage>
+    <Configurations>Debug;Release;Com_Tests</Configurations>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <OutputPath>bin\Debug\netcoreapp3.0\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,7 +21,7 @@
       <Lcid>0</Lcid>
       <Isolated>false</Isolated>
       <Private>true</Private>
-      <EmbedInteropTypes>true</EmbedInteropTypes>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
     </COMReference>
     <COMReference Include="MSHTML.dll">
       <Guid>3050f1c5-98b5-11cf-bb82-00aa00bdce0b</Guid>
@@ -29,7 +31,7 @@
       <Lcid>0</Lcid>
       <Isolated>false</Isolated>
       <Private>true</Private>
-      <EmbedInteropTypes>true</EmbedInteropTypes>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
 
@@ -42,11 +44,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="comResources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>comResources.resx</DependentUpon>
-    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -55,14 +52,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="comResources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>comResources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\data\Data.csproj" />
   </ItemGroup>
 
 </Project>

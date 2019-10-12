@@ -1,0 +1,13 @@
+C:\Users\brenn\repos\tekkilor-lib\retail\bin\Release\netcoreapp3.0\Retail.deps.json
+C:\Users\brenn\repos\tekkilor-lib\retail\bin\Release\netcoreapp3.0\Retail.dll
+C:\Users\brenn\repos\tekkilor-lib\retail\bin\Release\netcoreapp3.0\Retail.pdb
+C:\Users\brenn\repos\tekkilor-lib\retail\bin\Release\netcoreapp3.0\Data.dll
+C:\Users\brenn\repos\tekkilor-lib\retail\bin\Release\netcoreapp3.0\utility.dll
+C:\Users\brenn\repos\tekkilor-lib\retail\bin\Release\netcoreapp3.0\Data.pdb
+C:\Users\brenn\repos\tekkilor-lib\retail\bin\Release\netcoreapp3.0\utility.pdb
+C:\Users\brenn\repos\tekkilor-lib\retail\obj\Release\netcoreapp3.0\Retail.csprojAssemblyReference.cache
+C:\Users\brenn\repos\tekkilor-lib\retail\obj\Release\netcoreapp3.0\Retail.AssemblyInfoInputs.cache
+C:\Users\brenn\repos\tekkilor-lib\retail\obj\Release\netcoreapp3.0\Retail.AssemblyInfo.cs
+C:\Users\brenn\repos\tekkilor-lib\retail\obj\Release\netcoreapp3.0\Retail.csproj.CopyComplete
+C:\Users\brenn\repos\tekkilor-lib\retail\obj\Release\netcoreapp3.0\Retail.dll
+C:\Users\brenn\repos\tekkilor-lib\retail\obj\Release\netcoreapp3.0\Retail.pdb

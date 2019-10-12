@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace data {
+namespace Data {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace data {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("data.dataResources", typeof(dataResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Data.dataResources", typeof(dataResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

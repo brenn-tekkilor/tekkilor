@@ -6,3 +6,11 @@ C:\Users\brenn\repos\Tekkilor\Utility\obj\Debug\netcoreapp3.0\utility.AssemblyIn
 C:\Users\brenn\repos\Tekkilor\Utility\obj\Debug\netcoreapp3.0\utility.dll
 C:\Users\brenn\repos\Tekkilor\Utility\obj\Debug\netcoreapp3.0\utility.pdb
 C:\Users\brenn\repos\Tekkilor\Utility\obj\Debug\netcoreapp3.0\utility.csprojAssemblyReference.cache
+C:\Users\brenn\repos\tekkilor-lib\Utility\bin\Debug\netcoreapp3.0\Utility.deps.json
+C:\Users\brenn\repos\tekkilor-lib\Utility\bin\Debug\netcoreapp3.0\Utility.dll
+C:\Users\brenn\repos\tekkilor-lib\Utility\bin\Debug\netcoreapp3.0\Utility.pdb
+C:\Users\brenn\repos\tekkilor-lib\Utility\obj\Debug\netcoreapp3.0\Utility.AssemblyInfoInputs.cache
+C:\Users\brenn\repos\tekkilor-lib\Utility\obj\Debug\netcoreapp3.0\Utility.AssemblyInfo.cs
+C:\Users\brenn\repos\tekkilor-lib\Utility\obj\Debug\netcoreapp3.0\Utility.dll
+C:\Users\brenn\repos\tekkilor-lib\Utility\obj\Debug\netcoreapp3.0\Utility.pdb
+C:\Users\brenn\repos\tekkilor-lib\Utility\obj\Debug\netcoreapp3.0\Utility.csprojAssemblyReference.cache

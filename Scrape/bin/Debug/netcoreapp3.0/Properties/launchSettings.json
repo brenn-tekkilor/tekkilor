@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "Scrape": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "MONO_PORT": "27017",
+        "MONO_HOST": "localhost",
+        "MONGO_USER": "apptests",
+        "MONGO_DB": "kroger_test",
+        "MONOG_PWD": "d0tn3t"
+      },
+      "nativeDebugging": true
+    }
+  }
+}

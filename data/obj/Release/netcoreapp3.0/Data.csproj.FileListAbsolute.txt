@@ -1,0 +1,14 @@
+C:\Users\brenn\repos\tekkilor-lib\data\bin\Release\netcoreapp3.0\Data.deps.json
+C:\Users\brenn\repos\tekkilor-lib\data\bin\Release\netcoreapp3.0\Data.dll
+C:\Users\brenn\repos\tekkilor-lib\data\bin\Release\netcoreapp3.0\Data.pdb
+C:\Users\brenn\repos\tekkilor-lib\data\bin\Release\netcoreapp3.0\Utility.dll
+C:\Users\brenn\repos\tekkilor-lib\data\bin\Release\netcoreapp3.0\Utility.pdb
+C:\Users\brenn\repos\tekkilor-lib\data\obj\Release\netcoreapp3.0\Data.csprojAssemblyReference.cache
+C:\Users\brenn\repos\tekkilor-lib\data\obj\Release\netcoreapp3.0\Data.dataResources.resources
+C:\Users\brenn\repos\tekkilor-lib\data\obj\Release\netcoreapp3.0\Data.Properties.Resources.resources
+C:\Users\brenn\repos\tekkilor-lib\data\obj\Release\netcoreapp3.0\Data.csproj.GenerateResource.cache
+C:\Users\brenn\repos\tekkilor-lib\data\obj\Release\netcoreapp3.0\Data.AssemblyInfoInputs.cache
+C:\Users\brenn\repos\tekkilor-lib\data\obj\Release\netcoreapp3.0\Data.AssemblyInfo.cs
+C:\Users\brenn\repos\tekkilor-lib\data\obj\Release\netcoreapp3.0\Data.csproj.CopyComplete
+C:\Users\brenn\repos\tekkilor-lib\data\obj\Release\netcoreapp3.0\Data.dll
+C:\Users\brenn\repos\tekkilor-lib\data\obj\Release\netcoreapp3.0\Data.pdb

@@ -6,13 +6,13 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.0": {
-      "com/1.0.0": {
+      "Com/1.0.0": {
         "dependencies": {
           "DumpExtensions": "2.0.0",
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.4"
         },
         "runtime": {
-          "com.dll": {}
+          "Com.dll": {}
         }
       },
       "DumpExtensions/2.0.0": {
@@ -38,7 +38,7 @@
     }
   },
   "libraries": {
-    "com/1.0.0": {
+    "Com/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

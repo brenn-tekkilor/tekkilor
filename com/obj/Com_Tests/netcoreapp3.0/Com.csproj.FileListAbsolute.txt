@@ -1,0 +1,4 @@
+C:\Users\brenn\repos\tekkilor-lib\com\obj\Com_Tests\netcoreapp3.0\Com.csprojAssemblyReference.cache
+C:\Users\brenn\repos\tekkilor-lib\com\obj\Com_Tests\netcoreapp3.0\Interop.SHDocVw.dll
+C:\Users\brenn\repos\tekkilor-lib\com\obj\Com_Tests\netcoreapp3.0\Interop.MSHTML.dll
+C:\Users\brenn\repos\tekkilor-lib\com\obj\Com_Tests\netcoreapp3.0\Com.csproj.ResolveComReference.cache
