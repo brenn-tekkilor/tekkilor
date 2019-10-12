@@ -18,13 +18,13 @@ namespace Scrape
                 Console.WriteLine("Welcome to Tekkilor's Scraper!");
                 Console.WriteLine("Please make a selection.");
                 Console.WriteLine("(A)utoRun from start.");
-                Console.WriteLine("(D)rop All Data.");
-                Console.WriteLine("Show All (I)tems.");
-                Console.WriteLine("Show All (C)ategories.");
+                Console.WriteLine("Clean (B)ad data.");
+                Console.WriteLine("(D)rop data.");
+                Console.WriteLine("Show (I)tems.");
+                Console.WriteLine("Show (C)ategories.");
                 Console.WriteLine("(Q)uit");
                 Console.WriteLine("(R)esume");
                 Console.WriteLine("(S)how IE Browser");
-                // Console.WriteLine("(R)esume the last scraping session.");
                 string userSelection = Console.ReadLine();
                 switch (userSelection)
                 {
@@ -32,6 +32,12 @@ namespace Scrape
                     case "a":
                         _ = BrowserHelper.Reset();
                         categories.Autorun(null);
+                        Main();
+                        break;
+                    case "B":
+                    case "b":
+                        _ = MongoHelper.Clean<ICategory>();
+                        _ = MongoHelper.Clean<IItem>();
                         Main();
                         break;
                     case "D":

@@ -9,7 +9,6 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization.IdGenerators;
 using MongoDB.Driver;
 
-
 namespace Data.Mongo
 {
     public class MongoService<TDoc> : IMongoService<TDoc>
@@ -36,21 +35,46 @@ namespace Data.Mongo
                     GetId(doc) ?? doc.Id;
             return doc;
         }
-        public IEnumerable<TDoc> GetAll()
-        {
-            return
-                _coll.Find(
+        public DeleteResult? DeleteOne(
+            TDoc? doc) =>
+                doc != null
+                    ? !string.IsNullOrEmpty(
+                        doc.Id)
+                        ? _coll.DeleteOne(
+                            new BsonDocument(
+                                "_id", new ObjectId(
+                                    doc.Id)))
+                            : null
+                        : null;
+        public IEnumerable<DeleteResult?>? DeleteMany(
+            IEnumerable<TDoc>? docs) =>
+            (from TDoc doc
+             in docs
+             select doc)
+            .Select(
+                doc => DeleteOne(doc))
+            .ToList();
+        public IEnumerable<DeleteResult?>? DeleteMany(
+            string? field, object? value) =>
+            (from
+                TDoc? doc
+             in
+                 GetMany(field, value)
+             select
+                doc)
+            .Select(
+                doc =>
+                    DeleteOne(doc))
+            .AsEnumerable();
+        public IEnumerable<TDoc> GetAll() =>
+            _coll.Find(
                     f => true).ToList();
-        }
-        public async Task<IEnumerable<TDoc>> GetAllAsync()
-        {
-            return
+        public async Task<IEnumerable<TDoc>> GetAllAsync() =>
             await _coll.Find(
                 f => true)
             .ToListAsync()
             .ConfigureAwait(
                 false);
-        }
         public string? GetId(
             TDoc? doc) =>
             doc != null
@@ -63,18 +87,12 @@ namespace Data.Mongo
                                 _coll, doc)
                         : doc.Id
                     : null;
-        public TDoc? GetLast()
-        {
-            return
-                GetAll()
+        public TDoc? GetLast() =>
+            GetAll()
                 .LastOrDefault();
-        }
         public IEnumerable<TDoc?>? GetMany(
-            IEnumerable<TDoc?>? docs)
-        {
-            return
-                docs != null
-                    ? docs.Any()
+            IEnumerable<TDoc?>? docs) =>
+                    docs?.Any() ?? false
                         ? (from
                                 TDoc? doc
                             in
@@ -87,15 +105,10 @@ namespace Data.Mongo
                                 doc => GetOne(
                                     doc))
                             .AsEnumerable()
-                    : null
-                : null;
-        }
+                    : null;
         public IEnumerable<TDoc?>? GetMany(
-            IEnumerable<string?>? ids)
-        {
-            return
-                ids != null
-                    ? ids.Any()
+            IEnumerable<string?>? ids) =>
+                ids?.Any() ?? false
                         ? (from
                                 string? id
                             in
@@ -109,13 +122,27 @@ namespace Data.Mongo
                                 id => GetOne(
                                     id))
                             .AsEnumerable()
-                        : null
-                    : null;
-        }
+                        : null;
+        public IEnumerable<TDoc?>? GetMany(
+            IDictionary<string, object?>? members) =>
+                    members?.Any() ?? false
+                        ? _coll.Find(
+                            new BsonDocument(
+                                members))
+                            .ToList()
+                        : null;
+        public IEnumerable<TDoc?>? GetMany(
+            string? field, object? value) =>
+            !string.IsNullOrEmpty(field)
+                    ? GetMany(
+                        new Dictionary
+                        <string, object?>()
+                    {
+                        { field, value }
+                    })
+                : null;
         public async Task<IEnumerable<TDoc?>?> GetManyAsync(
-            IEnumerable<TDoc?>? docs)
-        {
-            return
+            IEnumerable<TDoc?>? docs) =>
                 docs != null
                     ? docs.Any()
                         ? await Task
@@ -131,7 +158,6 @@ namespace Data.Mongo
                            .Cast<TDoc>()).ConfigureAwait(false)
                                 : null
                            : null;
-        }
         public async Task<IEnumerable<TDoc?>?> GetManyAsync(
             IEnumerable<string?>? ids)
         {
@@ -194,18 +220,11 @@ namespace Data.Mongo
                 : null;
         }
         public TDoc? GetOne(
-            IDictionary<string, object?>? members)
-        {
-            return
-                members != null
-                    ? members.Any()
-                        ? _coll.Find(
-                            new BsonDocument(
-                                members))
-                            .FirstOrDefault()
-                        : null
-                    : null;
-        }
+            IDictionary<string, object?>? members) =>
+                GetMany(
+                    members)
+                            ?.FirstOrDefault()
+                        ?? null;
         public async Task<TDoc?> GetOneAsync(
             TDoc? doc)
         {
@@ -357,9 +376,7 @@ namespace Data.Mongo
                 : null;
         }
         public UpdateResult? RemoveOne(
-            TDoc? doc)
-        {
-            return
+            TDoc? doc) =>
                 doc != null
                     ? !string.IsNullOrEmpty(
                         doc.Id)
@@ -385,7 +402,6 @@ namespace Data.Mongo
                                 }))
                         : null
                     : null;
-        }
         public UpdateResult? RemoveOne(
             string? id)
         {

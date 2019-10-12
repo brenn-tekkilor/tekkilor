@@ -4,11 +4,14 @@ using Data.Mongo.Extensions;
 using Data.Mongo.Interfaces;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.IdGenerators;
+using MongoDB.Driver;
 using Retail;
 using Retail.Common;
 using Retail.Interfaces;
 using Retail.Maps;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using Utility.Extensions;
 
@@ -65,5 +68,11 @@ namespace Scrape.FF.Helpers
                 new MongoService<TDoc>()
                 .GetLast();
         }
+        public static IEnumerable<DeleteResult?>? Clean<TDoc>()
+            where TDoc : class, IMongoDoc<TDoc> =>
+            new MongoService<TDoc>()
+            .DeleteMany(
+                 "_uri", "about:blank");             
+        
     }
 }

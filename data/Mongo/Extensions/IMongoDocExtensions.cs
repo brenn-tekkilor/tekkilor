@@ -1,6 +1,6 @@
 ﻿#nullable enable
 using Data.Mongo.Interfaces;
-using System;
+using MongoDB.Driver;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -10,154 +10,131 @@ namespace Data.Mongo.Extensions
     {
         public static TDoc? AssignId<TDoc>(
             this TDoc? doc)
-        where TDoc : class, IMongoDoc<TDoc> =>
-            doc?.Svc.AssignId(doc) ?? null;
+            where TDoc: class
+            , IMongoDoc<TDoc> =>
+                doc?.Svc.AssignId(
+                    doc)
+            ?? null;
+        public static DeleteResult? Delete<TDoc>(
+            this TDoc? doc)
+            where TDoc : class
+            , IMongoDoc<TDoc> =>
+                doc?.Svc.DeleteOne(
+                    doc)
+            ?? null;
+        public static IEnumerable<DeleteResult?>? DeleteMany<TDoc>(
+            this IEnumerable<TDoc>? docs)
+            where TDoc : class
+            , IMongoDoc<TDoc> =>
+                new MongoService<TDoc>().DeleteMany(
+                    docs);
         public static void DropCollection<TDoc>(
             this TDoc? doc)
-        where TDoc : class, IMongoDoc<TDoc>
-        {
-            doc?.Svc.Db.DropCollection(
-                doc?.GetTypeNames().iface);
-        }
+            where TDoc: class
+            , IMongoDoc<TDoc> =>
+                doc?.Svc.Db.DropCollection(
+                    typeof(TDoc).Name);
         public static IEnumerable<TDoc>? GetAll<TDoc>(
             this TDoc? doc)
-        where TDoc : class
-            , IMongoDoc<TDoc>
-        {
-            return
-                doc?.Svc.GetAll();
-        }
+            where TDoc: class
+            , IMongoDoc<TDoc> =>
+                doc?.Svc.GetAll()
+            ?? null;
         public static async Task<IEnumerable<TDoc>?> GetAllAsync<TDoc>(
             this TDoc? doc)
-        where TDoc : class
-            , IMongoDoc<TDoc>
-        {
-            return
+            where TDoc: class
+            , IMongoDoc<TDoc> =>
                 doc != null
-                    ? await
+                ? await
                     doc.Svc
                     .GetAllAsync()
                     .ConfigureAwait(false)
                 : null;
-        }
         public static TDoc? GetDoc<TDoc>(
             this TDoc? doc)
-        where TDoc : class
-            , IMongoDoc<TDoc>
-        {
-            return
-                doc?.Svc.GetOne(doc.Id);
-        }
+            where TDoc: class
+            , IMongoDoc<TDoc> =>
+                doc?.Svc.GetOne(
+                    doc?.Id
+                    ?? string.Empty)
+            ?? null;
         public static TDoc? GetDoc<TDoc>(
             this TDoc? doc
             , string? id)
-        where TDoc : class
-            , IMongoDoc<TDoc>
-        {
-            return
-                doc?.Svc.GetOne(id);
-        }
+            where TDoc: class
+            , IMongoDoc<TDoc> =>
+                doc?.Svc.GetOne(id)
+            ?? null;
         public static TDoc? GetDoc<TDoc>(
             this TDoc? doc
             , IDictionary<string, object?>? members)
-        where TDoc : class
-            , IMongoDoc<TDoc>
-        {
-            return
-                doc != null
-                    ? doc.Svc.GetOne(
-                        members)
-                : throw new
-                ArgumentNullException(
-                    nameof(
-                        doc));
-        }
-        public static TDoc? GetDoc<TDoc>(
-            this TDoc? doc
-            , string? field
-            , object? value)
-        where TDoc : class
-            , IMongoDoc<TDoc>
-        {
-            return
+            where TDoc: class
+            , IMongoDoc<TDoc> =>
                 doc?.Svc.GetOne(
-                        field, value);
-        }
-        public static async Task<TDoc?> GetDocAsync<TDoc>(
-            this TDoc? doc)
-        where TDoc : class
-        , IMongoDoc<TDoc>
-        {
-            return
-                doc != null
-                    ? await doc.Svc
-                    .GetOneAsync(
-                        doc.Id)
-                    .ConfigureAwait(
-                        false)
-                : null;
-        }
-        public static async Task<TDoc?> GetDocAsync<TDoc>(
-            this TDoc? doc, string? id)
-        where TDoc : class
-            , IMongoDoc<TDoc>
-        {
-            return
-                doc != null
-                    ? await doc.Svc
-                    .GetOneAsync(
-                        id ?? throw new
-                        ArgumentNullException(
-                            nameof(
-                                id)))
-                    .ConfigureAwait(
-                        false)
-                : null;
-        }
-        public static async Task<TDoc?> GetDocAsync<TDoc>(
-            this TDoc? doc
-            , IDictionary<string, object?>? members)
-        where TDoc : class
-            , IMongoDoc<TDoc>
-        {
-            return
-                doc != null
-                    ? await doc.Svc
-                        .GetOneAsync(
-                            members)
-                        .ConfigureAwait(
-                            false)
-                : null;
-        }
-        public static async Task<TDoc?> GetDocAsync<TDoc>(
+                        members);
+        public static TDoc? GetDoc<TDoc>(
             this TDoc? doc
             , string? field
             , object? value)
-        where TDoc : class, IMongoDoc<TDoc>
-            => doc != null
-                ? await doc.Svc
-                    .GetOneAsync(
+            where TDoc: class
+            , IMongoDoc<TDoc> =>
+                doc?.Svc.GetOne(
                         field, value)
-                    .ConfigureAwait(false)
-                : null;
-        public static (string iface, string type) GetTypeNames<TDoc>(
+            ?? null;
+        public static async Task<TDoc?> GetDocAsync<TDoc>(
             this TDoc? doc)
-        where TDoc : class, IMongoDoc<TDoc> =>
-            (typeof(TDoc).Name
-                , doc?.GetType().Name ?? string.Empty);
-        public static TDoc? Save<TDoc>(
-            this TDoc? doc)
-        where TDoc : class, IMongoDoc<TDoc> =>
-            doc?.Svc.Save(doc) ?? null;
-        public static async Task<TDoc?> SaveAsync<TDoc>(
-            this TDoc? doc)
-        where TDoc : class, IMongoDoc<TDoc> =>
+            where TDoc: class
+            , IMongoDoc<TDoc> =>
             doc != null
                 ? await doc.Svc
-                .SaveAsync(
-                    doc)
+                .GetOneAsync(
+                    doc.Id)
+                .ConfigureAwait(
+                    false)
+            : null;
+        public static async Task<TDoc?> GetDocAsync<TDoc>(
+            this TDoc? doc, string? id)
+            where TDoc: class
+            , IMongoDoc<TDoc> =>
+            doc != null
+                ? await doc.Svc
+                .GetOneAsync(id)
                 .ConfigureAwait(false)
             : null;
+        public static async Task<TDoc?> GetDocAsync<TDoc>(
+            this TDoc? doc
+            , IDictionary<string, object?>? members)
+            where TDoc: class
+            , IMongoDoc<TDoc> =>
+            doc != null
+                ? await doc.Svc
+                .GetOneAsync(members)
+                        .ConfigureAwait(false)
+            : null;
+        public static async Task<TDoc?> GetDocAsync<TDoc>(
+            this TDoc? doc
+            , string? field
+            , object? value)
+            where TDoc: class, IMongoDoc<TDoc> =>
+            doc != null
+                ? await doc.Svc
+                .GetOneAsync(
+                    field, value)
+                .ConfigureAwait(false)
+            : null;
+        public static TDoc? Save<TDoc>(
+            this TDoc? doc)
+            where TDoc: class, IMongoDoc<TDoc> =>
+            doc?.Svc.Save(doc)
+            ?? null;
+        public static async Task<TDoc?> SaveAsync<TDoc>(
+            this TDoc? doc)
+            where TDoc : class, IMongoDoc<TDoc> =>
+            doc != null
+                ? await
+                    doc.Svc.SaveAsync(doc)
+                    .ConfigureAwait(false)
+                : null;
         public static bool TryAssignId<TDoc>(
             this TDoc? doc
             , out TDoc? result)

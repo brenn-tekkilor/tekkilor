@@ -176,8 +176,6 @@ namespace Retail.Maps
                  // _uri
                  cm.MapMember(c => c._uri)
                     .SetSerializer(new UriSerializer());
-                 cm.MapMember(c => c._uri)
-                    .SetIgnoreIfNull(true);
              });
         }
     }
