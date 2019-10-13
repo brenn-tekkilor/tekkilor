@@ -10,7 +10,7 @@
         "dependencies": {
           "Data": "1.0.0",
           "DumpExtensions": "2.0.0",
-          "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.4"
+          "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.6"
         },
         "runtime": {
           "Com.dll": {}
@@ -35,20 +35,20 @@
           }
         }
       },
-      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.4": {
+      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.6": {
         "dependencies": {
-          "Microsoft.CodeAnalysis.VersionCheckAnalyzer": "2.9.4",
-          "Microsoft.CodeQuality.Analyzers": "2.9.4",
-          "Microsoft.NetCore.Analyzers": "2.9.4",
-          "Microsoft.NetFramework.Analyzers": "2.9.4"
+          "Microsoft.CodeAnalysis.VersionCheckAnalyzer": "2.9.6",
+          "Microsoft.CodeQuality.Analyzers": "2.9.6",
+          "Microsoft.NetCore.Analyzers": "2.9.6",
+          "Microsoft.NetFramework.Analyzers": "2.9.6"
         }
       },
-      "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.4": {},
-      "Microsoft.CodeQuality.Analyzers/2.9.4": {},
-      "Microsoft.NetCore.Analyzers/2.9.4": {},
+      "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.6": {},
+      "Microsoft.CodeQuality.Analyzers/2.9.6": {},
+      "Microsoft.NetCore.Analyzers/2.9.6": {},
       "Microsoft.NETCore.Platforms/2.1.2": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
-      "Microsoft.NetFramework.Analyzers/2.9.4": {},
+      "Microsoft.NetFramework.Analyzers/2.9.6": {},
       "Microsoft.Win32.Primitives/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
@@ -68,7 +68,7 @@
           "System.Runtime.InteropServices": "4.3.0"
         }
       },
-      "MongoDB.Bson/2.9.1": {
+      "MongoDB.Bson/2.9.2": {
         "dependencies": {
           "NETStandard.Library": "1.6.1",
           "System.Collections.NonGeneric": "4.0.1",
@@ -79,30 +79,30 @@
         },
         "runtime": {
           "lib/netstandard1.5/MongoDB.Bson.dll": {
-            "assemblyVersion": "2.9.1.0",
-            "fileVersion": "2.9.1.0"
+            "assemblyVersion": "2.9.2.0",
+            "fileVersion": "2.9.2.0"
           }
         }
       },
-      "MongoDB.Driver/2.9.1": {
+      "MongoDB.Driver/2.9.2": {
         "dependencies": {
-          "MongoDB.Bson": "2.9.1",
-          "MongoDB.Driver.Core": "2.9.1",
+          "MongoDB.Bson": "2.9.2",
+          "MongoDB.Driver.Core": "2.9.2",
           "NETStandard.Library": "1.6.1",
           "System.ComponentModel.TypeConverter": "4.1.0",
           "System.Linq.Queryable": "4.0.1"
         },
         "runtime": {
           "lib/netstandard1.5/MongoDB.Driver.dll": {
-            "assemblyVersion": "2.9.1.0",
-            "fileVersion": "2.9.1.0"
+            "assemblyVersion": "2.9.2.0",
+            "fileVersion": "2.9.2.0"
           }
         }
       },
-      "MongoDB.Driver.Core/2.9.1": {
+      "MongoDB.Driver.Core/2.9.2": {
         "dependencies": {
           "DnsClient": "1.2.0",
-          "MongoDB.Bson": "2.9.1",
+          "MongoDB.Bson": "2.9.2",
           "NETStandard.Library": "1.6.1",
           "SharpCompress": "0.23.0",
           "System.Collections.Specialized": "4.0.1",
@@ -115,8 +115,8 @@
         },
         "runtime": {
           "lib/netstandard1.5/MongoDB.Driver.Core.dll": {
-            "assemblyVersion": "2.9.1.0",
-            "fileVersion": "2.9.1.0"
+            "assemblyVersion": "2.9.2.0",
+            "fileVersion": "2.9.2.0"
           }
         }
       },
@@ -1048,9 +1048,9 @@
       },
       "Data/1.0.0": {
         "dependencies": {
-          "MongoDB.Bson": "2.9.1",
-          "MongoDB.Driver": "2.9.1",
-          "MongoDB.Driver.Core": "2.9.1",
+          "MongoDB.Bson": "2.9.2",
+          "MongoDB.Driver": "2.9.2",
+          "MongoDB.Driver.Core": "2.9.2",
           "Utility": "1.0.0"
         },
         "runtime": {
@@ -1084,33 +1084,33 @@
       "path": "dumpextensions/2.0.0",
       "hashPath": "dumpextensions.2.0.0.nupkg.sha512"
     },
-    "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.4": {
+    "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Hq8ubc3mgNElouL7+nYqUfrgtH0s5F8UUdicBnjr72DSPKC/bQMU8lpySQ3Hog7JU7SyblFfpJR3VMgNFTzcww==",
-      "path": "microsoft.codeanalysis.fxcopanalyzers/2.9.4",
-      "hashPath": "microsoft.codeanalysis.fxcopanalyzers.2.9.4.nupkg.sha512"
+      "sha512": "sha512-GBZV6P8u3uIXYrlapvbpaaaB5LpF3hk+I2ThIcoVyENr8krNOovFyJhi6FQHgnxd0XLPj9J9Nt35iuqwVe/XJw==",
+      "path": "microsoft.codeanalysis.fxcopanalyzers/2.9.6",
+      "hashPath": "microsoft.codeanalysis.fxcopanalyzers.2.9.6.nupkg.sha512"
     },
-    "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.4": {
+    "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-vKZIF7bNEOwaHvS163bdmq9zcpcN4ve2hXEacoeeeGGYClo8/YqM1iMYnsTdWtcXZj7VT9SvwhkIapjkjGM3OQ==",
-      "path": "microsoft.codeanalysis.versioncheckanalyzer/2.9.4",
-      "hashPath": "microsoft.codeanalysis.versioncheckanalyzer.2.9.4.nupkg.sha512"
+      "sha512": "sha512-Q5rRN0+9TJsfsXaGKnzDjGkUZ4Rd8ZKmpSND1j49jsmLacCspp4ZaJ31nJn76B/W0qrb4GkEBxKtj3U9lo2gqg==",
+      "path": "microsoft.codeanalysis.versioncheckanalyzer/2.9.6",
+      "hashPath": "microsoft.codeanalysis.versioncheckanalyzer.2.9.6.nupkg.sha512"
     },
-    "Microsoft.CodeQuality.Analyzers/2.9.4": {
+    "Microsoft.CodeQuality.Analyzers/2.9.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+uoxsrXJ27SYXjGcXTGHwLqjC3pXe6NEDUUGv1uCWtgl7kLMHmqqPA/3zAy/H2OhU/Zq9XrYEABYXNiLUqLjMA==",
-      "path": "microsoft.codequality.analyzers/2.9.4",
-      "hashPath": "microsoft.codequality.analyzers.2.9.4.nupkg.sha512"
+      "sha512": "sha512-jND04w/FPgfBYKkLLnosmvgHs8NMpMvQ7LQqyiCjMlKOM+MT6edgvTU0vAAowxGuLGceC6pjJm0kUVkG9qT3CQ==",
+      "path": "microsoft.codequality.analyzers/2.9.6",
+      "hashPath": "microsoft.codequality.analyzers.2.9.6.nupkg.sha512"
     },
-    "Microsoft.NetCore.Analyzers/2.9.4": {
+    "Microsoft.NetCore.Analyzers/2.9.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-WF0/qmG4cgMA7bl+82OfAW+DH7Qo3Np72ocK8Qr8eTyg5ZPEPonDLL0doZz29o2DF0bUht5t84lDccy+vIhXxQ==",
-      "path": "microsoft.netcore.analyzers/2.9.4",
-      "hashPath": "microsoft.netcore.analyzers.2.9.4.nupkg.sha512"
+      "sha512": "sha512-YPcQ+gCt66btt9jNHNi4vrRK6AAP7EIO17quwUeHLUw7vhc6q18r2RYVTLKQvOQuOXs1UEYHArENpppwFP4MLA==",
+      "path": "microsoft.netcore.analyzers/2.9.6",
+      "hashPath": "microsoft.netcore.analyzers.2.9.6.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/2.1.2": {
       "type": "package",
@@ -1126,12 +1126,12 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
-    "Microsoft.NetFramework.Analyzers/2.9.4": {
+    "Microsoft.NetFramework.Analyzers/2.9.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-xH1wQgNCIMmDWn1Y0ppu0hLqD+xexU4sygsLMIqpro9S7g+l1fBiDKuIq5dEIUmKetseyj/DLXn/ymfF5CKgBQ==",
-      "path": "microsoft.netframework.analyzers/2.9.4",
-      "hashPath": "microsoft.netframework.analyzers.2.9.4.nupkg.sha512"
+      "sha512": "sha512-8VyWe53rtUkgJFAkbCZY5KT2t1tEmRrdK1Z+zbyRlzoKVEHyMs0+WNBeJ8d2YB/NjXaYAlaVG2CGZFnQUrwY6A==",
+      "path": "microsoft.netframework.analyzers/2.9.6",
+      "hashPath": "microsoft.netframework.analyzers.2.9.6.nupkg.sha512"
     },
     "Microsoft.Win32.Primitives/4.3.0": {
       "type": "package",
@@ -1147,26 +1147,26 @@
       "path": "microsoft.win32.registry/4.0.0",
       "hashPath": "microsoft.win32.registry.4.0.0.nupkg.sha512"
     },
-    "MongoDB.Bson/2.9.1": {
+    "MongoDB.Bson/2.9.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rNktW0kVLMqu7ypT3R15z/alN5FYrHeZOoDnRbup0uwbx/wsvYfMT6+wpGlp25CGqjG9dA3dqweogVeGhU8WEA==",
-      "path": "mongodb.bson/2.9.1",
-      "hashPath": "mongodb.bson.2.9.1.nupkg.sha512"
+      "sha512": "sha512-XZaqjCLyDJZnfcvy6Aefp2pfanKI/ArrT4tNqXAIAjsU4krZHXLj2shPDfg1NBS5ez0wFMV17aBUUJv43TF3ww==",
+      "path": "mongodb.bson/2.9.2",
+      "hashPath": "mongodb.bson.2.9.2.nupkg.sha512"
     },
-    "MongoDB.Driver/2.9.1": {
+    "MongoDB.Driver/2.9.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-iDJVTDgi4QZnLJ01Gpiv9UVSO7a+2/dD7DTC33YpKvBpQdeWX4la6z0UfApgP4dAZ1ctdsUmT3zHHh1v8KH+2g==",
-      "path": "mongodb.driver/2.9.1",
-      "hashPath": "mongodb.driver.2.9.1.nupkg.sha512"
+      "sha512": "sha512-On2uj3x0EXUIJCogdkJHrTF17rsDolyrdeXGJw+alse2R11WRa657noz44fyYX/00wPpbjHBx15Qqig8mAYvHQ==",
+      "path": "mongodb.driver/2.9.2",
+      "hashPath": "mongodb.driver.2.9.2.nupkg.sha512"
     },
-    "MongoDB.Driver.Core/2.9.1": {
+    "MongoDB.Driver.Core/2.9.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ns0rmDypEsUvRW7M/PW5wqdKoTJjeXKiGSwx0IJM1Rv2XJE6aqTRoI81sINqpABwcNhI6ZbXnkUuNAlwtYPITg==",
-      "path": "mongodb.driver.core/2.9.1",
-      "hashPath": "mongodb.driver.core.2.9.1.nupkg.sha512"
+      "sha512": "sha512-ZyQVrrsmh0eLKxFZpQybboZwrnQJc526aksqG8umNfIy2UHqSa1/C8FpWi9/zEeaxjx9gvaFmc5dg6CouC1gXQ==",
+      "path": "mongodb.driver.core/2.9.2",
+      "hashPath": "mongodb.driver.core.2.9.2.nupkg.sha512"
     },
     "NETStandard.Library/1.6.1": {
       "type": "package",

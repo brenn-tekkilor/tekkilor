@@ -14,31 +14,31 @@
           "lib/netstandard2.0/DnsClient.dll": {}
         }
       },
-      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.4": {
+      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.CodeAnalysis.VersionCheckAnalyzer": "[2.9.4]",
-          "Microsoft.CodeQuality.Analyzers": "[2.9.4]",
-          "Microsoft.NetCore.Analyzers": "[2.9.4]",
-          "Microsoft.NetFramework.Analyzers": "[2.9.4]"
+          "Microsoft.CodeAnalysis.VersionCheckAnalyzer": "[2.9.6]",
+          "Microsoft.CodeQuality.Analyzers": "[2.9.6]",
+          "Microsoft.NetCore.Analyzers": "[2.9.6]",
+          "Microsoft.NetFramework.Analyzers": "[2.9.6]"
         },
         "build": {
           "build/Microsoft.CodeAnalysis.FxCopAnalyzers.props": {}
         }
       },
-      "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.4": {
+      "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.6": {
         "type": "package",
         "build": {
           "build/Microsoft.CodeAnalysis.VersionCheckAnalyzer.props": {}
         }
       },
-      "Microsoft.CodeQuality.Analyzers/2.9.4": {
+      "Microsoft.CodeQuality.Analyzers/2.9.6": {
         "type": "package",
         "build": {
           "build/Microsoft.CodeQuality.Analyzers.props": {}
         }
       },
-      "Microsoft.NetCore.Analyzers/2.9.4": {
+      "Microsoft.NetCore.Analyzers/2.9.6": {
         "type": "package",
         "build": {
           "build/Microsoft.NetCore.Analyzers.props": {}
@@ -62,7 +62,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NetFramework.Analyzers/2.9.4": {
+      "Microsoft.NetFramework.Analyzers/2.9.6": {
         "type": "package",
         "build": {
           "build/Microsoft.NetFramework.Analyzers.props": {}
@@ -105,7 +105,7 @@
           }
         }
       },
-      "MongoDB.Bson/2.9.1": {
+      "MongoDB.Bson/2.9.2": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1",
@@ -122,11 +122,11 @@
           "lib/netstandard1.5/MongoDB.Bson.dll": {}
         }
       },
-      "MongoDB.Driver/2.9.1": {
+      "MongoDB.Driver/2.9.2": {
         "type": "package",
         "dependencies": {
-          "MongoDB.Bson": "2.9.1",
-          "MongoDB.Driver.Core": "2.9.1",
+          "MongoDB.Bson": "2.9.2",
+          "MongoDB.Driver.Core": "2.9.2",
           "NETStandard.Library": "1.6.1",
           "System.ComponentModel.TypeConverter": "4.1.0",
           "System.Linq.Queryable": "4.0.1"
@@ -138,11 +138,11 @@
           "lib/netstandard1.5/MongoDB.Driver.dll": {}
         }
       },
-      "MongoDB.Driver.Core/2.9.1": {
+      "MongoDB.Driver.Core/2.9.2": {
         "type": "package",
         "dependencies": {
           "DnsClient": "1.2.0",
-          "MongoDB.Bson": "2.9.1",
+          "MongoDB.Bson": "2.9.2",
           "NETStandard.Library": "1.6.1",
           "SharpCompress": "0.23.0",
           "System.Collections.Specialized": "4.0.1",
@@ -1836,19 +1836,48 @@
         "lib/netstandard2.0/DnsClient.xml"
       ]
     },
-    "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.4": {
-      "sha512": "Hq8ubc3mgNElouL7+nYqUfrgtH0s5F8UUdicBnjr72DSPKC/bQMU8lpySQ3Hog7JU7SyblFfpJR3VMgNFTzcww==",
+    "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.6": {
+      "sha512": "GBZV6P8u3uIXYrlapvbpaaaB5LpF3hk+I2ThIcoVyENr8krNOovFyJhi6FQHgnxd0XLPj9J9Nt35iuqwVe/XJw==",
       "type": "package",
-      "path": "microsoft.codeanalysis.fxcopanalyzers/2.9.4",
+      "path": "microsoft.codeanalysis.fxcopanalyzers/2.9.6",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "EULA.rtf",
         "ThirdPartyNotices.rtf",
         "build/Microsoft.CodeAnalysis.FxCopAnalyzers.props",
+        "documentation/Analyzer Configuration.md",
         "documentation/Microsoft.CodeAnalysis.FxCopAnalyzers.md",
         "documentation/Microsoft.CodeAnalysis.FxCopAnalyzers.sarif",
-        "microsoft.codeanalysis.fxcopanalyzers.2.9.4.nupkg.sha512",
+        "editorconfig/AllRulesDefault/.editorconfig",
+        "editorconfig/AllRulesDisabled/.editorconfig",
+        "editorconfig/AllRulesEnabled/.editorconfig",
+        "editorconfig/DataflowRulesDefault/.editorconfig",
+        "editorconfig/DataflowRulesEnabled/.editorconfig",
+        "editorconfig/DesignRulesDefault/.editorconfig",
+        "editorconfig/DesignRulesEnabled/.editorconfig",
+        "editorconfig/DocumentationRulesDefault/.editorconfig",
+        "editorconfig/DocumentationRulesEnabled/.editorconfig",
+        "editorconfig/GlobalizationRulesDefault/.editorconfig",
+        "editorconfig/GlobalizationRulesEnabled/.editorconfig",
+        "editorconfig/InteroperabilityRulesDefault/.editorconfig",
+        "editorconfig/InteroperabilityRulesEnabled/.editorconfig",
+        "editorconfig/MaintainabilityRulesDefault/.editorconfig",
+        "editorconfig/MaintainabilityRulesEnabled/.editorconfig",
+        "editorconfig/NamingRulesDefault/.editorconfig",
+        "editorconfig/NamingRulesEnabled/.editorconfig",
+        "editorconfig/PerformanceRulesDefault/.editorconfig",
+        "editorconfig/PerformanceRulesEnabled/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesDefault/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesEnabled/.editorconfig",
+        "editorconfig/ReliabilityRulesDefault/.editorconfig",
+        "editorconfig/ReliabilityRulesEnabled/.editorconfig",
+        "editorconfig/SecurityRulesDefault/.editorconfig",
+        "editorconfig/SecurityRulesEnabled/.editorconfig",
+        "editorconfig/UsageRulesDefault/.editorconfig",
+        "editorconfig/UsageRulesEnabled/.editorconfig",
+        "microsoft.codeanalysis.fxcopanalyzers.2.9.6.nupkg.sha512",
         "microsoft.codeanalysis.fxcopanalyzers.nuspec",
         "rulesets/AllRulesDefault.ruleset",
         "rulesets/AllRulesDisabled.ruleset",
@@ -1885,21 +1914,20 @@
         "rulesets/legacy/GlobalizationRules.ruleset",
         "rulesets/legacy/ManagedMinimumRules.ruleset",
         "rulesets/legacy/MinimumRecommendedRules.ruleset",
-        "rulesets/legacy/Sdl-7.1.Recommended.ruleset",
-        "rulesets/legacy/Sdl-7.1.Required.ruleset",
         "rulesets/legacy/SecurityRules.ruleset",
         "tools/install.ps1",
         "tools/uninstall.ps1"
       ]
     },
-    "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.4": {
-      "sha512": "vKZIF7bNEOwaHvS163bdmq9zcpcN4ve2hXEacoeeeGGYClo8/YqM1iMYnsTdWtcXZj7VT9SvwhkIapjkjGM3OQ==",
+    "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.6": {
+      "sha512": "Q5rRN0+9TJsfsXaGKnzDjGkUZ4Rd8ZKmpSND1j49jsmLacCspp4ZaJ31nJn76B/W0qrb4GkEBxKtj3U9lo2gqg==",
       "type": "package",
-      "path": "microsoft.codeanalysis.versioncheckanalyzer/2.9.4",
+      "path": "microsoft.codeanalysis.versioncheckanalyzer/2.9.6",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "EULA.rtf",
         "ThirdPartyNotices.rtf",
         "analyzers/dotnet/Microsoft.CodeAnalysis.VersionCheckAnalyzer.dll",
         "analyzers/dotnet/cs/Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll",
@@ -1916,9 +1944,19 @@
         "analyzers/dotnet/zh-Hans/Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll",
         "analyzers/dotnet/zh-Hant/Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll",
         "build/Microsoft.CodeAnalysis.VersionCheckAnalyzer.props",
+        "documentation/Analyzer Configuration.md",
         "documentation/Microsoft.CodeAnalysis.VersionCheckAnalyzer.md",
         "documentation/Microsoft.CodeAnalysis.VersionCheckAnalyzer.sarif",
-        "microsoft.codeanalysis.versioncheckanalyzer.2.9.4.nupkg.sha512",
+        "editorconfig/AllRulesDefault/.editorconfig",
+        "editorconfig/AllRulesDisabled/.editorconfig",
+        "editorconfig/AllRulesEnabled/.editorconfig",
+        "editorconfig/DataflowRulesDefault/.editorconfig",
+        "editorconfig/DataflowRulesEnabled/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesDefault/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesEnabled/.editorconfig",
+        "editorconfig/ReliabilityRulesDefault/.editorconfig",
+        "editorconfig/ReliabilityRulesEnabled/.editorconfig",
+        "microsoft.codeanalysis.versioncheckanalyzer.2.9.6.nupkg.sha512",
         "microsoft.codeanalysis.versioncheckanalyzer.nuspec",
         "rulesets/AllRulesDefault.ruleset",
         "rulesets/AllRulesDisabled.ruleset",
@@ -1933,14 +1971,15 @@
         "tools/uninstall.ps1"
       ]
     },
-    "Microsoft.CodeQuality.Analyzers/2.9.4": {
-      "sha512": "+uoxsrXJ27SYXjGcXTGHwLqjC3pXe6NEDUUGv1uCWtgl7kLMHmqqPA/3zAy/H2OhU/Zq9XrYEABYXNiLUqLjMA==",
+    "Microsoft.CodeQuality.Analyzers/2.9.6": {
+      "sha512": "jND04w/FPgfBYKkLLnosmvgHs8NMpMvQ7LQqyiCjMlKOM+MT6edgvTU0vAAowxGuLGceC6pjJm0kUVkG9qT3CQ==",
       "type": "package",
-      "path": "microsoft.codequality.analyzers/2.9.4",
+      "path": "microsoft.codequality.analyzers/2.9.6",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "EULA.rtf",
         "ThirdPartyNotices.rtf",
         "analyzers/dotnet/cs/Humanizer.dll",
         "analyzers/dotnet/cs/Microsoft.CodeQuality.Analyzers.dll",
@@ -1975,9 +2014,33 @@
         "analyzers/dotnet/vb/zh-Hans/Microsoft.CodeQuality.Analyzers.resources.dll",
         "analyzers/dotnet/vb/zh-Hant/Microsoft.CodeQuality.Analyzers.resources.dll",
         "build/Microsoft.CodeQuality.Analyzers.props",
+        "documentation/Analyzer Configuration.md",
         "documentation/Microsoft.CodeQuality.Analyzers.md",
         "documentation/Microsoft.CodeQuality.Analyzers.sarif",
-        "microsoft.codequality.analyzers.2.9.4.nupkg.sha512",
+        "editorconfig/AllRulesDefault/.editorconfig",
+        "editorconfig/AllRulesDisabled/.editorconfig",
+        "editorconfig/AllRulesEnabled/.editorconfig",
+        "editorconfig/DataflowRulesDefault/.editorconfig",
+        "editorconfig/DataflowRulesEnabled/.editorconfig",
+        "editorconfig/DesignRulesDefault/.editorconfig",
+        "editorconfig/DesignRulesEnabled/.editorconfig",
+        "editorconfig/DocumentationRulesDefault/.editorconfig",
+        "editorconfig/DocumentationRulesEnabled/.editorconfig",
+        "editorconfig/MaintainabilityRulesDefault/.editorconfig",
+        "editorconfig/MaintainabilityRulesEnabled/.editorconfig",
+        "editorconfig/NamingRulesDefault/.editorconfig",
+        "editorconfig/NamingRulesEnabled/.editorconfig",
+        "editorconfig/PerformanceRulesDefault/.editorconfig",
+        "editorconfig/PerformanceRulesEnabled/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesDefault/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesEnabled/.editorconfig",
+        "editorconfig/ReliabilityRulesDefault/.editorconfig",
+        "editorconfig/ReliabilityRulesEnabled/.editorconfig",
+        "editorconfig/SecurityRulesDefault/.editorconfig",
+        "editorconfig/SecurityRulesEnabled/.editorconfig",
+        "editorconfig/UsageRulesDefault/.editorconfig",
+        "editorconfig/UsageRulesEnabled/.editorconfig",
+        "microsoft.codequality.analyzers.2.9.6.nupkg.sha512",
         "microsoft.codequality.analyzers.nuspec",
         "rulesets/AllRulesDefault.ruleset",
         "rulesets/AllRulesDisabled.ruleset",
@@ -2006,14 +2069,15 @@
         "tools/uninstall.ps1"
       ]
     },
-    "Microsoft.NetCore.Analyzers/2.9.4": {
-      "sha512": "WF0/qmG4cgMA7bl+82OfAW+DH7Qo3Np72ocK8Qr8eTyg5ZPEPonDLL0doZz29o2DF0bUht5t84lDccy+vIhXxQ==",
+    "Microsoft.NetCore.Analyzers/2.9.6": {
+      "sha512": "YPcQ+gCt66btt9jNHNi4vrRK6AAP7EIO17quwUeHLUw7vhc6q18r2RYVTLKQvOQuOXs1UEYHArENpppwFP4MLA==",
       "type": "package",
-      "path": "microsoft.netcore.analyzers/2.9.4",
+      "path": "microsoft.netcore.analyzers/2.9.6",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "EULA.rtf",
         "ThirdPartyNotices.rtf",
         "analyzers/dotnet/cs/Microsoft.NetCore.Analyzers.dll",
         "analyzers/dotnet/cs/Microsoft.NetCore.CSharp.Analyzers.dll",
@@ -2046,9 +2110,29 @@
         "analyzers/dotnet/vb/zh-Hans/Microsoft.NetCore.Analyzers.resources.dll",
         "analyzers/dotnet/vb/zh-Hant/Microsoft.NetCore.Analyzers.resources.dll",
         "build/Microsoft.NetCore.Analyzers.props",
+        "documentation/Analyzer Configuration.md",
         "documentation/Microsoft.NetCore.Analyzers.md",
         "documentation/Microsoft.NetCore.Analyzers.sarif",
-        "microsoft.netcore.analyzers.2.9.4.nupkg.sha512",
+        "editorconfig/AllRulesDefault/.editorconfig",
+        "editorconfig/AllRulesDisabled/.editorconfig",
+        "editorconfig/AllRulesEnabled/.editorconfig",
+        "editorconfig/DataflowRulesDefault/.editorconfig",
+        "editorconfig/DataflowRulesEnabled/.editorconfig",
+        "editorconfig/GlobalizationRulesDefault/.editorconfig",
+        "editorconfig/GlobalizationRulesEnabled/.editorconfig",
+        "editorconfig/InteroperabilityRulesDefault/.editorconfig",
+        "editorconfig/InteroperabilityRulesEnabled/.editorconfig",
+        "editorconfig/PerformanceRulesDefault/.editorconfig",
+        "editorconfig/PerformanceRulesEnabled/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesDefault/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesEnabled/.editorconfig",
+        "editorconfig/ReliabilityRulesDefault/.editorconfig",
+        "editorconfig/ReliabilityRulesEnabled/.editorconfig",
+        "editorconfig/SecurityRulesDefault/.editorconfig",
+        "editorconfig/SecurityRulesEnabled/.editorconfig",
+        "editorconfig/UsageRulesDefault/.editorconfig",
+        "editorconfig/UsageRulesEnabled/.editorconfig",
+        "microsoft.netcore.analyzers.2.9.6.nupkg.sha512",
         "microsoft.netcore.analyzers.nuspec",
         "rulesets/AllRulesDefault.ruleset",
         "rulesets/AllRulesDisabled.ruleset",
@@ -2105,14 +2189,15 @@
         "runtime.json"
       ]
     },
-    "Microsoft.NetFramework.Analyzers/2.9.4": {
-      "sha512": "xH1wQgNCIMmDWn1Y0ppu0hLqD+xexU4sygsLMIqpro9S7g+l1fBiDKuIq5dEIUmKetseyj/DLXn/ymfF5CKgBQ==",
+    "Microsoft.NetFramework.Analyzers/2.9.6": {
+      "sha512": "8VyWe53rtUkgJFAkbCZY5KT2t1tEmRrdK1Z+zbyRlzoKVEHyMs0+WNBeJ8d2YB/NjXaYAlaVG2CGZFnQUrwY6A==",
       "type": "package",
-      "path": "microsoft.netframework.analyzers/2.9.4",
+      "path": "microsoft.netframework.analyzers/2.9.6",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "EULA.rtf",
         "ThirdPartyNotices.rtf",
         "analyzers/dotnet/cs/Microsoft.NetFramework.Analyzers.dll",
         "analyzers/dotnet/cs/Microsoft.NetFramework.CSharp.Analyzers.dll",
@@ -2145,9 +2230,21 @@
         "analyzers/dotnet/vb/zh-Hans/Microsoft.NetFramework.Analyzers.resources.dll",
         "analyzers/dotnet/vb/zh-Hant/Microsoft.NetFramework.Analyzers.resources.dll",
         "build/Microsoft.NetFramework.Analyzers.props",
+        "documentation/Analyzer Configuration.md",
         "documentation/Microsoft.NetFramework.Analyzers.md",
         "documentation/Microsoft.NetFramework.Analyzers.sarif",
-        "microsoft.netframework.analyzers.2.9.4.nupkg.sha512",
+        "editorconfig/AllRulesDefault/.editorconfig",
+        "editorconfig/AllRulesDisabled/.editorconfig",
+        "editorconfig/AllRulesEnabled/.editorconfig",
+        "editorconfig/DataflowRulesDefault/.editorconfig",
+        "editorconfig/DataflowRulesEnabled/.editorconfig",
+        "editorconfig/DesignRulesDefault/.editorconfig",
+        "editorconfig/DesignRulesEnabled/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesDefault/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesEnabled/.editorconfig",
+        "editorconfig/SecurityRulesDefault/.editorconfig",
+        "editorconfig/SecurityRulesEnabled/.editorconfig",
+        "microsoft.netframework.analyzers.2.9.6.nupkg.sha512",
         "microsoft.netframework.analyzers.nuspec",
         "rulesets/AllRulesDefault.ruleset",
         "rulesets/AllRulesDisabled.ruleset",
@@ -2232,10 +2329,10 @@
         "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll"
       ]
     },
-    "MongoDB.Bson/2.9.1": {
-      "sha512": "rNktW0kVLMqu7ypT3R15z/alN5FYrHeZOoDnRbup0uwbx/wsvYfMT6+wpGlp25CGqjG9dA3dqweogVeGhU8WEA==",
+    "MongoDB.Bson/2.9.2": {
+      "sha512": "XZaqjCLyDJZnfcvy6Aefp2pfanKI/ArrT4tNqXAIAjsU4krZHXLj2shPDfg1NBS5ez0wFMV17aBUUJv43TF3ww==",
       "type": "package",
-      "path": "mongodb.bson/2.9.1",
+      "path": "mongodb.bson/2.9.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2244,14 +2341,14 @@
         "lib/net452/MongoDB.Bson.xml",
         "lib/netstandard1.5/MongoDB.Bson.dll",
         "lib/netstandard1.5/MongoDB.Bson.xml",
-        "mongodb.bson.2.9.1.nupkg.sha512",
+        "mongodb.bson.2.9.2.nupkg.sha512",
         "mongodb.bson.nuspec"
       ]
     },
-    "MongoDB.Driver/2.9.1": {
-      "sha512": "iDJVTDgi4QZnLJ01Gpiv9UVSO7a+2/dD7DTC33YpKvBpQdeWX4la6z0UfApgP4dAZ1ctdsUmT3zHHh1v8KH+2g==",
+    "MongoDB.Driver/2.9.2": {
+      "sha512": "On2uj3x0EXUIJCogdkJHrTF17rsDolyrdeXGJw+alse2R11WRa657noz44fyYX/00wPpbjHBx15Qqig8mAYvHQ==",
       "type": "package",
-      "path": "mongodb.driver/2.9.1",
+      "path": "mongodb.driver/2.9.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2260,14 +2357,14 @@
         "lib/net452/MongoDB.Driver.xml",
         "lib/netstandard1.5/MongoDB.Driver.dll",
         "lib/netstandard1.5/MongoDB.Driver.xml",
-        "mongodb.driver.2.9.1.nupkg.sha512",
+        "mongodb.driver.2.9.2.nupkg.sha512",
         "mongodb.driver.nuspec"
       ]
     },
-    "MongoDB.Driver.Core/2.9.1": {
-      "sha512": "ns0rmDypEsUvRW7M/PW5wqdKoTJjeXKiGSwx0IJM1Rv2XJE6aqTRoI81sINqpABwcNhI6ZbXnkUuNAlwtYPITg==",
+    "MongoDB.Driver.Core/2.9.2": {
+      "sha512": "ZyQVrrsmh0eLKxFZpQybboZwrnQJc526aksqG8umNfIy2UHqSa1/C8FpWi9/zEeaxjx9gvaFmc5dg6CouC1gXQ==",
       "type": "package",
-      "path": "mongodb.driver.core/2.9.1",
+      "path": "mongodb.driver.core/2.9.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2276,7 +2373,7 @@
         "lib/net452/MongoDB.Driver.Core.xml",
         "lib/netstandard1.5/MongoDB.Driver.Core.dll",
         "lib/netstandard1.5/MongoDB.Driver.Core.xml",
-        "mongodb.driver.core.2.9.1.nupkg.sha512",
+        "mongodb.driver.core.2.9.2.nupkg.sha512",
         "mongodb.driver.core.nuspec"
       ]
     },
@@ -6490,10 +6587,10 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
-      "Microsoft.CodeAnalysis.FxCopAnalyzers >= 2.9.4",
-      "MongoDB.Bson >= 2.9.1",
-      "MongoDB.Driver >= 2.9.1",
-      "MongoDB.Driver.Core >= 2.9.1",
+      "Microsoft.CodeAnalysis.FxCopAnalyzers >= 2.9.6",
+      "MongoDB.Bson >= 2.9.2",
+      "MongoDB.Driver >= 2.9.2",
+      "MongoDB.Driver.Core >= 2.9.2",
       "Utility >= 1.0.0"
     ]
   },
@@ -6549,19 +6646,19 @@
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.9.4, )"
+            "version": "[2.9.6, )"
           },
           "MongoDB.Bson": {
             "target": "Package",
-            "version": "[2.9.1, )"
+            "version": "[2.9.2, )"
           },
           "MongoDB.Driver": {
             "target": "Package",
-            "version": "[2.9.1, )"
+            "version": "[2.9.2, )"
           },
           "MongoDB.Driver.Core": {
             "target": "Package",
-            "version": "[2.9.1, )"
+            "version": "[2.9.2, )"
           }
         },
         "imports": [

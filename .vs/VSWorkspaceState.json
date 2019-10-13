@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Scrape",
+    "\\Scrape\\bin",
+    "\\Scrape\\bin\\Debug",
+    "\\Scrape\\bin\\Debug\\netcoreapp3.0"
   ],
-  "SelectedNode": "\\utility",
   "PreviewInSolutionExplorer": false
 }

@@ -51,19 +51,19 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.9.4, )"
+              "version": "[2.9.6, )"
             },
             "MongoDB.Bson": {
               "target": "Package",
-              "version": "[2.9.1, )"
+              "version": "[2.9.2, )"
             },
             "MongoDB.Driver": {
               "target": "Package",
-              "version": "[2.9.1, )"
+              "version": "[2.9.2, )"
             },
             "MongoDB.Driver.Core": {
               "target": "Package",
-              "version": "[2.9.1, )"
+              "version": "[2.9.2, )"
             }
           },
           "imports": [
@@ -136,11 +136,11 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.9.4, )"
+              "version": "[2.9.6, )"
             },
             "MongoDB.Bson": {
               "target": "Package",
-              "version": "[2.9.1, )"
+              "version": "[2.9.2, )"
             }
           },
           "imports": [
@@ -205,7 +205,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.9.4, )"
+              "version": "[2.9.6, )"
             }
           },
           "imports": [
