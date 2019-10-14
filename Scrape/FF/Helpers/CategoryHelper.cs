@@ -1,57 +1,96 @@
 ﻿#nullable enable
+
 using Com.DOM;
+using Com.DOM.Interfaces;
 using MSHTML;
 using Retail.Interfaces;
 using Com.DOM.Extensions;
 using System;
 using System.Linq;
 using System.Collections.Generic;
-using Com.DOM.Interfaces;
 using Scrape.FF.Factories;
 using Data.Mongo.Interfaces;
 using Data.Mongo.Extensions;
+using Data.Mongo;
 
 namespace Scrape.FF.Helpers
 {
     public class CategoryHelper
     {
-        private ITreeTraverser<IHTMLElement>? _tree;
         private readonly IDictionary<IHTMLElement, ICategory?> _elementCategory
             = new Dictionary<IHTMLElement, ICategory?>();
+
         private const string _categoryRootQuery =
             @"section.CollapsibleFacetContainer--Categories > div.CollapsibleFacetContainer-content > ul.ProductsNavList";
-        private static readonly CategoryFactory _factory = ResourceHelper.CatFactory;
-        public CategoryHelper() { }
-        public ITreeTraverser<IHTMLElement>? Tree => _tree;
 
-        public IDictionary<IHTMLElement, ICategory?> ElementCategory => _elementCategory;
+        private static readonly CategoryFactory _factory = new CategoryFactory();
+        private static readonly IMongoService<ICategory> _categories = new MongoService<ICategory>();
+
+        public CategoryHelper()
+        {
+        }
+
+        public static IMongoService<ICategory> Categories => _categories;
+        public static CategoryFactory Factory => _factory;
+        public ITreeTraverser<IHTMLElement>? Tree { get; private set; }
+
         private void ResetTree()
         {
-            _tree = null;
-            _tree =
+            Tree = null;
+            Tree =
                 CreateTree();
         }
+
         public void Autorun(IHTMLElement? current)
         {
             ResetTree();
 
-            if (_tree != null)
+            if (Tree != null)
             {
-                _tree.AfterTraversalEvent
+                Tree.AfterTraversalEvent
                     += Tree_AfterTraversalEvent;
-                _tree.AfterTraversalEvent +=
+                Tree.AfterTraversalEvent +=
                     Tree_AfterTraversalEvent_Autorun;
+                Tree.BeforeTraversalEvent += _tree_BeforeTraversalEvent;
+            }
+            if (_factory != null)
+            {
+                _factory.AfterOneEvent += _factory_AfterOneEvent;
+                _factory.BeforeOneEvent += _factory_BeforeOneEvent;
             }
             if (current == null)
-                _tree?.ToFirst();
-            else if (_tree != null)
+                Tree?.ToFirst();
+            else if (Tree != null)
             {
-                _tree.Current = current;
-                _tree.Current =
-                     _tree.PeekPreviousSibling() ?? _tree.PeekParent();
-                _tree.ToNext();
+                Tree.Current = current;
+                Tree.Current =
+                     Tree.PeekPreviousSibling() ?? Tree.PeekParent();
+                Tree.ToNext();
             }
         }
+
+        private void _tree_BeforeTraversalEvent((ITreeTraverser<IHTMLElement>, IHTMLElement?, string?) evtArgs)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void _factory_BeforeOneEvent(IHTMLElement? evtArgs)
+        {
+        }
+
+        private void _factory_AfterOneEvent((IHTMLElement? input, ICategory? output) evtArgs)
+        {
+            if (evtArgs.output != null
+                && evtArgs.input != null)
+            {
+                ICategory parent =
+                    _categories.GetOne(
+                        "_taxonomyId"
+                        , evtArgs.output
+                        .ParseTaxonomyId(
+                            Tree.PeekNextSibling
+        }
+
         private void Tree_AfterTraversalEvent_Autorun(
             (ITreeTraverser<IHTMLElement> tree
             , IHTMLElement? start
@@ -59,6 +98,7 @@ namespace Scrape.FF.Helpers
         {
             evtArgs.tree.ToNext();
         }
+
         private void Tree_AfterTraversalEvent(
             (ITreeTraverser<IHTMLElement> tree
             , IHTMLElement? start
@@ -88,7 +128,7 @@ namespace Scrape.FF.Helpers
                 // if there are no more children
                 // scrape items
                 if (!evtArgs.tree
-                        .HasCurrentChildren())
+                        .HasCurrentChildren)
                     BrowserHelper.IE().ScrapeList(
                         "div.ProductCard"
                         , new StockItemFactory()
@@ -103,11 +143,11 @@ namespace Scrape.FF.Helpers
                            });
                 // if this is the last child
                 // remove definition for parent
-                if (evtArgs.tree.IsLastChild()
-                    && parent != null)
+                if (evtArgs.tree.IsLastChild                    && parent != null)
                     _ = RemoveElementDefinition(parent);
             }
         }
+
         private ICategory? AddElementDefinition(
             IHTMLElement key
             , ICategory? value)
@@ -120,6 +160,7 @@ namespace Scrape.FF.Helpers
                 key, value);
             return value;
         }
+
         private ICategory? CreateCategory(IHTMLElement? input)
         {
             if (input != null)
@@ -139,6 +180,7 @@ namespace Scrape.FF.Helpers
             }
             return null;
         }
+
         private ITreeTraverser<IHTMLElement>? CreateTree()
         {
             IHTMLElement? rootElement =
@@ -174,6 +216,7 @@ namespace Scrape.FF.Helpers
                         })
                     : null;
         }
+
         private ICategory? MakeChild(
             ICategory? child
             , IHTMLElement? parent)
@@ -182,7 +225,7 @@ namespace Scrape.FF.Helpers
             {
                 child.Parent ??=
                     (parent != null
-                            ? ElementCategory.TryGetValue(
+                            ? _elementCategory.TryGetValue(
                                     parent
                                 , out ICategory? p)
                                 ? p ?? CreateCategory(parent)
@@ -197,31 +240,30 @@ namespace Scrape.FF.Helpers
             }
             return child;
         }
+
         private bool RemoveElementDefinition(
             IHTMLElement key)
         {
-            if (ElementCategory
+            if (_elementCategory
                    .ContainsKey(key))
             {
-                ElementCategory
+                _elementCategory
                     .Remove(key);
                 return true;
             }
             return false;
         }
+
         public void ResumeLastCategory()
         {
-
             BrowserHelper.IE().Go(
-                MongoHelper
-                .GetLast<ICategory>()
+                _categories
+                .GetLast()
                 ?.Link);
             Autorun(
                 BrowserHelper
                     .IE().Query(
                         "li.ProductsNavList-item.is-selected"));
-
-
         }
     }
 }

@@ -30,10 +30,9 @@ namespace Data.Mongo.Extensions
                     docs);
         public static void DropCollection<TDoc>(
             this TDoc? doc)
-            where TDoc: class
+            where TDoc : class
             , IMongoDoc<TDoc> =>
-                doc?.Svc.Db.DropCollection(
-                    typeof(TDoc).Name);
+                doc?.Svc.DropCollection();
         public static IEnumerable<TDoc>? GetAll<TDoc>(
             this TDoc? doc)
             where TDoc: class

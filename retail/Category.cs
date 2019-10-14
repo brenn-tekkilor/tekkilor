@@ -8,7 +8,6 @@ using Data.Mongo.Extensions;
 using Data.Mongo.Interfaces;
 using Retail.Common;
 using Retail.Interfaces;
-using Utility.Extensions;
 
 namespace Retail
 {
@@ -323,15 +322,11 @@ namespace Retail
                         _uri,
                 };
         }
-        public static string ParseTaxonomyId(
-            string link)
-        {
-            return
-                !(string.IsNullOrEmpty(link))
+        public string ParseTaxonomyId(
+            string link) => !(string.IsNullOrEmpty(link))
                     ? link.Split('/')[^1]
                     .Split('?')[0]
                 : string.Empty;
-        }
         public override string? ToString()
         {
             return
@@ -445,10 +440,7 @@ namespace Retail
         return false;
     }
         private static SellingRestriction ParseSellingRestriction(
-            string taxonomyId)
-        {
-            return
-                !string.IsNullOrEmpty(
+            string taxonomyId) => !string.IsNullOrEmpty(
                     taxonomyId)
                     ? taxonomyId
                         .Substring(0, 2)
@@ -469,6 +461,5 @@ namespace Retail
                 .Common
                 .SellingRestriction
                     .None;
-        }
     }
 }

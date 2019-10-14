@@ -1,80 +1,106 @@
-﻿using Retail.Interfaces;
+﻿using Retail;
+using Retail.Interfaces;
 using Scrape.FF.Helpers;
 using System;
+using Data.Mongo.Extensions;
+using Data.Mongo;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.IdGenerators;
+using Retail.Maps;
+using Retail.Common;
 
 namespace Scrape
 {
     internal class Program
     {
+        private static CategoryHelper _categories =
+                    new CategoryHelper();
         private static void Main()
         {
             {
-                MongoHelper.InitializeDb();
+                InitializeData();
                 _ = new ResourceHelper();
                 _ = BrowserHelper.Instance();
-                CategoryHelper categories =
-                    new CategoryHelper();
-
-                Console.WriteLine("Welcome to Tekkilor's Scraper!");
-                Console.WriteLine("Please make a selection.");
-                Console.WriteLine("(A)utoRun from start.");
-                Console.WriteLine("Clean (B)ad data.");
-                Console.WriteLine("(D)rop data.");
-                Console.WriteLine("Show (I)tems.");
-                Console.WriteLine("Show (C)ategories.");
-                Console.WriteLine("(Q)uit");
-                Console.WriteLine("(R)esume");
-                Console.WriteLine("(S)how IE Browser");
+                
+                
+            }
+            static void Run()
+            {
+                DisplayUI();
                 string userSelection = Console.ReadLine();
                 switch (userSelection)
                 {
                     case "A":
                     case "a":
                         _ = BrowserHelper.Reset();
-                        categories.Autorun(null);
-                        Main();
-                        break;
-                    case "B":
-                    case "b":
-                        _ = MongoHelper.Clean<ICategory>();
-                        _ = MongoHelper.Clean<IItem>();
-                        Main();
+                        _categories.Autorun(null);
+                        Run();
                         break;
                     case "D":
                     case "d":
-                        MongoHelper.DropCollections();
-                        Main();
-                        break;
-                    case "I":
-                    case "i":
-                        MongoHelper.WriteAll<IItem>();
-                        Main();
-                        break;
-                    case "C":
-                    case "c":
-                        MongoHelper.WriteAll<ICategory>();
-                        Main();
+                        new MongoService<ICategory>().DropCollection();
+                        new MongoService<IItemSellingPrices>().DropCollection();
+                        new MongoService<IItem>().DropCollection();
+                        Run();
                         break;
                     case "Q":
                     case "q":
                         BrowserHelper.Close();
-                        Main();
+                        Run();
                         break;
                     case "R":
                     case "r":
-                        categories.ResumeLastCategory();
-                        Main();
+                        _categories.ResumeLastCategory();
+                        Run();
                         break;
                     case "S":
                     case "s":
                         BrowserHelper.Visible = true;
-                        Main();
+                        Run();
                         break;
                     default:
-                        Main();
+                        Run();
                         break;
                 }
             }
+            static void InitializeData()
+            {
+                System.Environment.SetEnvironmentVariable(
+                    "MONGO_DB", "kroger_test");
+                System.Environment.SetEnvironmentVariable(
+                    "MONGO_USER", "apptests");
+                System.Environment.SetEnvironmentVariable(
+                    "MONGO_PWD", "d0tn3t");
+                System.Environment.SetEnvironmentVariable(
+                    "MONGO_HOST", "localhost");
+                System.Environment.SetEnvironmentVariable(
+                    "MONGO_PORT", "27017");
+                BsonSerializer.RegisterIdGenerator(
+                    typeof(string)
+                    , new StringObjectIdGenerator());
+                _ = new CategoryMap();
+                _ = new ItemSellingPricesMap();
+                _ = new HTMLImageMap();
+                _ = new StockItemMap();
+                _ = new Category();
+                _ = new ItemSellingPrices();
+                _ = new HTMLImage();
+                _ = new StockItem();
+
+            }
+            static void DisplayUI()
+            {
+                Console.WriteLine("Welcome to Tekkilor's Scraper!");
+                Console.WriteLine("Please make a selection.");
+                Console.WriteLine("(A)utoRun from start.");
+                Console.WriteLine("(D)rop data.");
+                Console.WriteLine("Show (I)tems.");
+                Console.WriteLine("Show (C)ategories.");
+                Console.WriteLine("(Q)uit");
+                Console.WriteLine("(R)esume");
+                Console.WriteLine("(S)how IE Browser");
+            }
         }
+    }
     }
 }

@@ -19,5 +19,7 @@ namespace Retail.Interfaces
         string SellingRestriction { get; set; }
         string TaxonomyId { get; set; }
         ICategory? AddChild(ICategory child);
+        string ParseTaxonomyId(string link);
+
     }
 }

@@ -59,7 +59,7 @@ namespace Scrape.FF.Factories
                     input != null
                         ? !string.IsNullOrEmpty(
                             taxonomyId)
-                            ? new Category()
+                            ? new Category
                             {
                                 Link
                                     = link,

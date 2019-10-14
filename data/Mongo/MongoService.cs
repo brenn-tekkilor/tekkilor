@@ -66,6 +66,10 @@ namespace Data.Mongo
                 doc =>
                     DeleteOne(doc))
             .AsEnumerable();
+        public void DropCollection()
+        {
+            _db.DropCollection(typeof(TDoc).Name);
+        }
         public IEnumerable<TDoc> GetAll() =>
             _coll.Find(
                     f => true).ToList();

@@ -17,10 +17,12 @@ namespace Data.Mongo.Interfaces
             IEnumerable<TDoc>? docs);
         IEnumerable<DeleteResult?>? DeleteMany(
             string? field, object? value);
+        void DropCollection();
         IEnumerable<TDoc> GetAll();
         Task<IEnumerable<TDoc>> GetAllAsync();
         string? GetId(
             TDoc? doc);
+        TDoc? GetLast();
         IEnumerable<TDoc?>? GetMany(
             IEnumerable<string?>? ids);
         IEnumerable<TDoc?>? GetMany(

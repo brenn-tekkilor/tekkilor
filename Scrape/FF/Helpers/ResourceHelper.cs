@@ -22,8 +22,6 @@ namespace Scrape.FF.Helpers
             StockItemFactory _stockFactory =
             new StockItemFactory();
         public ResourceHelper() { }
-        public static CategoryFactory
-            CatFactory => _catFactory;
         public static ItemSellingPricesFactory
             PricesFactory => _pricesFactory;
         public static StockItemFactory

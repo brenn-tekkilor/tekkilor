@@ -42,63 +42,79 @@ namespace Com.DOM
             get => CastOut(_current);
             set => _current = CastIn(value);
         }
-        public bool HasCurrentChildren()
+        public bool HasCurrentChildren
         {
-            IHTMLDOMNode? current =
-                _current;
-            IHTMLDOMNode? child
-            = current != null
-                ? ToFirstNode()
-            : null;
-            IHTMLDOMNode? parent
-            = child != null
-                ? ToParentNode()
-            : null;
-            _current = current;
-            return
-            parent != null
-                ? parent.Equals(current)
-            : false;
-        }
-        public IEnumerable<T?>? CurrentChildren()
-        {
-            IEnumerable<IHTMLDOMNode?>? children =
-                CurrentChildNodes();
-            return
-            children != null
-                ? children.Any()
-                    ? children.Select(
-                        n => CastOut(n))
-                    .AsEnumerable()
-                : null
-            : null;
-        }
-        public bool IsFirstChild()
-        {
-            IHTMLDOMNode? current =
-                _current;
-            bool result =
-                ToPreviousSiblingNode()
-                    == null
-                    ? true
+            get
+            {
+                IHTMLDOMNode? current =
+                    _current;
+                IHTMLDOMNode? child
+                = current != null
+                    ? ToFirstNode()
+                : null;
+                IHTMLDOMNode? parent
+                = child != null
+                    ? ToParentNode()
+                : null;
+                _current = current;
+                return
+                parent != null
+                    ? parent.Equals(current)
                 : false;
-            _current = current;
-            return
-                result;
+            }
         }
-        public bool IsLastChild()
+
+        public IEnumerable<T?>? CurrentChildren
         {
-            IHTMLDOMNode? current =
-                 _current;
-            bool result =
-                ToNextSiblingNode()
-                    == null
-                    ? true
-                : false;
-            _current = current;
-            return
-                result;
+            get
+            {
+                IEnumerable<IHTMLDOMNode?>? children =
+                    CurrentChildNodes();
+                return
+                children != null
+                    ? children.Any()
+                        ? children.Select(
+                            n => CastOut(n))
+                        .AsEnumerable()
+                    : null
+                : null;
+            }
         }
+
+        public bool IsFirstChild
+        {
+            get
+            {
+                IHTMLDOMNode? current =
+                    _current;
+                bool result =
+                    ToPreviousSiblingNode()
+                        == null
+                        ? true
+                    : false;
+                _current = current;
+                return
+                    result;
+            }
+        }
+
+        public bool IsLastChild
+        {
+            get
+            {
+                IHTMLDOMNode? current =
+                     _current;
+                bool result =
+                    ToNextSiblingNode()
+                        == null
+                        ? true
+                    : false;
+                _current = current;
+                return
+                    result;
+            }
+        }
+
         public T? PeekFirst()
         {
             IHTMLDOMNode? current =
@@ -106,6 +122,17 @@ namespace Com.DOM
             T? result =
                     CastOut(
                         ToFirstNode());
+            _current = current;
+            return
+               result;
+        }
+        public T? PeekFirst(T? target)
+        {
+            IHTMLDOMNode? current =
+               _current;
+            _current = CastIn(target);
+            T? result =
+               PeekParent();
             _current = current;
             return
                result;
@@ -121,6 +148,17 @@ namespace Com.DOM
             return
                result;
         }
+        public T? PeekLast(T? target)
+        {
+            IHTMLDOMNode? current =
+               _current;
+            _current = CastIn(target);
+            T? result =
+               PeekParent();
+            _current = current;
+            return
+               result;
+        }
         public T? PeekNext()
         {
             IHTMLDOMNode? current =
@@ -128,6 +166,17 @@ namespace Com.DOM
             T? result =
                CastOut(
                    ToNextNode());
+            _current = current;
+            return
+               result;
+        }
+        public T? PeekNext(T? target)
+        {
+            IHTMLDOMNode? current =
+               _current;
+            _current = CastIn(target);
+            T? result =
+               PeekParent();
             _current = current;
             return
                result;
@@ -143,6 +192,17 @@ namespace Com.DOM
             return
                result;
         }
+        public T? PeekNextSibling(T? target)
+        {
+            IHTMLDOMNode? current =
+               _current;
+            _current = CastIn(target);
+            T? result =
+               PeekParent();
+            _current = current;
+            return
+               result;
+        }
         public T? PeekParent()
         {
             IHTMLDOMNode? current =
@@ -150,6 +210,17 @@ namespace Com.DOM
             T? result =
                CastOut(
                    ToParentNode());
+            _current = current;
+            return
+               result;
+        }
+        public T? PeekParent(T? target)
+        {
+            IHTMLDOMNode? current =
+               _current;
+            _current = CastIn(target);
+            T? result =
+               PeekParent();
             _current = current;
             return
                result;
@@ -165,6 +236,17 @@ namespace Com.DOM
             return
                result;
         }
+        public T? PeekPrevious(T? target)
+        {
+            IHTMLDOMNode? current =
+               _current;
+            _current = CastIn(target);
+            T? result =
+               PeekParent();
+            _current = current;
+            return
+               result;
+        }
         public T? PeekPreviousSibling()
         {
             IHTMLDOMNode? current =
@@ -172,6 +254,17 @@ namespace Com.DOM
             T? result =
                CastOut(
                    ToPreviousSiblingNode());
+            _current = current;
+            return
+               result;
+        }
+        public T? PeekPreviousSibling(T? target)
+        {
+            IHTMLDOMNode? current =
+               _current;
+            _current = CastIn(target);
+            T? result =
+               PeekParent();
             _current = current;
             return
                result;
@@ -325,7 +418,7 @@ namespace Com.DOM
             IHTMLDOMNode? current = _current;
             List<IHTMLDOMNode?> result =
                 new List<IHTMLDOMNode?>();
-            if (HasCurrentChildren())
+            if (HasCurrentChildren)
                 result.Add(ToFirstNode());
             while(ToNextSiblingNode() != null)
             {
